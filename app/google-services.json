@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "915431498839",
+    "project_id": "seporj-d490e",
+    "storage_bucket": "seporj-d490e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915431498839:android:d53f995bfdb2e97f47ef12",
+        "android_client_info": {
+          "package_name": "com.example.seProjOrder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915431498839-hd5g8fc89jjr02srdlbpmnvjv50a3g1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6RUNTNrBg3H_WYl00TU8vc07R_FrDSGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915431498839-hd5g8fc89jjr02srdlbpmnvjv50a3g1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915431498839:android:0a3b73c1b28b7ba647ef12",
+        "android_client_info": {
+          "package_name": "com.kuei.MyOrderApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915431498839-hd5g8fc89jjr02srdlbpmnvjv50a3g1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6RUNTNrBg3H_WYl00TU8vc07R_FrDSGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915431498839-hd5g8fc89jjr02srdlbpmnvjv50a3g1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

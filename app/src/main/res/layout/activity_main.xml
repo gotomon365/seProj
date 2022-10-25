@@ -8,131 +8,152 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/TVstoreName"
+        android:id="@+id/tvStoreName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="11dp"
+        android:layout_marginEnd="23dp"
         android:text="@string/中山店"
-        app:layout_constraintEnd_toStartOf="@+id/SPtableNumber"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/spnTableNumber"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/SPtableNumber"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="274dp"
-        android:layout_marginBottom="9dp"
+        android:id="@+id/spnTableNumber"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginBottom="8dp"
         android:contentDescription="@string/桌號"
-        app:layout_constraintBottom_toTopOf="@+id/SPdishType"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStoreName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/TVstoreName"
+        app:layout_constraintStart_toEndOf="@+id/tvStoreName"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/SPdishType"
+        android:id="@+id/spnDishType"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="11dp"
         android:contentDescription="@string/餐點種類"
-        app:layout_constraintBottom_toTopOf="@+id/SPchoice"
-        app:layout_constraintEnd_toEndOf="@+id/SPchoice"
-        app:layout_constraintStart_toStartOf="@+id/SPchoice"
-        app:layout_constraintTop_toTopOf="@+id/SPtaste" />
+        app:layout_constraintBottom_toBottomOf="@+id/spnTaste"
+        app:layout_constraintEnd_toStartOf="@+id/spnTaste"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spnTaste" />
 
     <Spinner
-        android:id="@+id/SPtaste"
+        android:id="@+id/spnTaste"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginBottom="50dp"
-        android:contentDescription="@string/口味"
-        app:layout_constraintBottom_toBottomOf="@+id/SPtemp"
-        app:layout_constraintEnd_toEndOf="@+id/SPtemp"
-        app:layout_constraintStart_toStartOf="@+id/SPtemp"
-        app:layout_constraintTop_toTopOf="@+id/TVstoreName" />
-
-    <Spinner
-        android:id="@+id/SPchoice"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginEnd="13dp"
-        android:contentDescription="@string/可選"
-        app:layout_constraintBottom_toBottomOf="@+id/SPtemp"
-        app:layout_constraintEnd_toStartOf="@+id/SPtaste"
-        app:layout_constraintStart_toStartOf="@+id/inputCnt"
-        app:layout_constraintTop_toBottomOf="@+id/SPtaste" />
-
-    <Spinner
-        android:id="@+id/SPtemp"
-        android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="63dp"
+        android:contentDescription="@string/口味"
+        app:layout_constraintBottom_toBottomOf="@+id/spnTemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spnDishType"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spnChoice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="11dp"
+        android:contentDescription="@string/可選"
+        app:layout_constraintBottom_toBottomOf="@+id/spnTemp"
+        app:layout_constraintEnd_toStartOf="@+id/spnTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spnTemp" />
+
+    <Spinner
+        android:id="@+id/spnTemp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="129dp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="131dp"
         android:contentDescription="@string/冷熱"
-        app:layout_constraintBottom_toTopOf="@+id/TVcomment"
-        app:layout_constraintStart_toStartOf="@+id/TVcomment" />
+        app:layout_constraintBottom_toTopOf="@+id/lvDish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spnChoice"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/TVcnt"
+        android:id="@+id/tvCnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="218dp"
         android:text="@string/數量"
-        app:layout_constraintEnd_toStartOf="@+id/SPchoice"
-        app:layout_constraintStart_toStartOf="@+id/SPchoice"
-        app:layout_constraintTop_toBottomOf="@+id/SPchoice" />
+        app:layout_constraintStart_toStartOf="@+id/edtTxtCnt"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/inputCnt"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="17dp"
+        android:id="@+id/edtTxtCnt"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/數量"
         android:inputType="number"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toBottomOf="@+id/inputComment"
-        app:layout_constraintEnd_toStartOf="@+id/inputComment"
+        app:layout_constraintBottom_toBottomOf="@+id/edtTxtComment"
+        app:layout_constraintEnd_toEndOf="@+id/spnChoice"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVcnt" />
+        app:layout_constraintTop_toTopOf="@+id/edtTxtComment" />
 
     <TextView
-        android:id="@+id/TVcomment"
+        android:id="@+id/tvComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
+        android:layout_marginTop="39dp"
         android:text="@string/備註"
-        app:layout_constraintBottom_toTopOf="@+id/inputComment"
-        app:layout_constraintStart_toStartOf="@+id/inputComment" />
+        app:layout_constraintStart_toStartOf="@+id/edtTxtComment"
+        app:layout_constraintTop_toBottomOf="@+id/spnTemp" />
 
     <EditText
-        android:id="@+id/inputComment"
+        android:id="@+id/edtTxtComment"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="200dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="12dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/請輸入備註"
         android:inputType="textPersonName"
         android:textColorHint="#757575"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintBottom_toTopOf="@+id/lvDish"
+        app:layout_constraintStart_toEndOf="@+id/edtTxtCnt"
+        app:layout_constraintTop_toBottomOf="@+id/tvComment" />
 
     <ListView
+        android:id="@+id/lvDish"
         android:layout_width="0dp"
-        android:layout_height="239dp"
-        android:layout_marginTop="191dp"
-        android:layout_marginBottom="189dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="93dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Order"
+        app:layout_constraintEnd_toEndOf="@+id/edtTxtComment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvCnt" />
+
+    <Button
+        android:id="@+id/btn_Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="150dp"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/SPtemp"
-        app:layout_constraintStart_toStartOf="@+id/SPchoice"
-        app:layout_constraintTop_toTopOf="@+id/SPchoice" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
