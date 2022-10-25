@@ -2,17 +2,132 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layer1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/TVstoreName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="11dp"
+        android:text="中山店"
+        app:layout_constraintEnd_toStartOf="@+id/SPtableNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/SPtableNumber"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="274dp"
+        android:layout_marginBottom="9dp"
+        android:contentDescription="桌號"
+        app:layout_constraintBottom_toTopOf="@+id/SPdishType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TVstoreName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/SPdishType"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="餐點種類"
+        app:layout_constraintBottom_toTopOf="@+id/SPchoice"
+        app:layout_constraintEnd_toEndOf="@+id/SPchoice"
+        app:layout_constraintStart_toStartOf="@+id/SPchoice"
+        app:layout_constraintTop_toTopOf="@+id/SPtaste" />
+
+    <Spinner
+        android:id="@+id/SPtaste"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="口味"
+        app:layout_constraintBottom_toBottomOf="@+id/SPtemp"
+        app:layout_constraintEnd_toEndOf="@+id/SPtemp"
+        app:layout_constraintStart_toStartOf="@+id/SPtemp"
+        app:layout_constraintTop_toTopOf="@+id/TVstoreName" />
+
+    <Spinner
+        android:id="@+id/SPchoice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:contentDescription="可選"
+        app:layout_constraintBottom_toBottomOf="@+id/SPtemp"
+        app:layout_constraintEnd_toStartOf="@+id/SPtaste"
+        app:layout_constraintStart_toStartOf="@+id/inputCnt"
+        app:layout_constraintTop_toBottomOf="@+id/SPtaste" />
+
+    <Spinner
+        android:id="@+id/SPtemp"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="19dp"
+        android:contentDescription="冷熱"
+        app:layout_constraintBottom_toTopOf="@+id/TVcomment"
+        app:layout_constraintStart_toStartOf="@+id/TVcomment" />
+
+    <TextView
+        android:id="@+id/TVcnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="數量"
+        app:layout_constraintEnd_toStartOf="@+id/SPchoice"
+        app:layout_constraintStart_toStartOf="@+id/SPchoice"
+        app:layout_constraintTop_toBottomOf="@+id/SPchoice" />
+
+    <EditText
+        android:id="@+id/inputCnt"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="17dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/inputComment"
+        app:layout_constraintEnd_toStartOf="@+id/inputComment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVcnt" />
+
+    <TextView
+        android:id="@+id/TVcomment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="備註"
+        app:layout_constraintBottom_toTopOf="@+id/inputComment"
+        app:layout_constraintStart_toStartOf="@+id/inputComment" />
+
+    <EditText
+        android:id="@+id/inputComment"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:layout_width="0dp"
+        android:layout_height="239dp"
+        android:layout_marginTop="191dp"
+        android:layout_marginBottom="189dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/SPtemp"
+        app:layout_constraintStart_toStartOf="@+id/SPchoice"
+        app:layout_constraintTop_toTopOf="@+id/SPchoice" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
