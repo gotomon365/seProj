@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">seProjOrder</string>
+    <string name="中山店">中山店</string>
+    <string name="桌號">桌號</string>
+    <string name="冷熱">冷熱</string>
+    <string name="數量">數量</string>
+    <string name="餐點種類">餐點種類</string>
+    <string name="口味">口味</string>
+    <string name="可選">可選</string>
+    <string name="備註">備註</string>
+    <string name="請輸入備註">請輸入備註</string>
 </resources>
